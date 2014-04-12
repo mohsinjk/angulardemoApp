@@ -1,0 +1,10 @@
+﻿<div>
+    <h2>View 2</h2>
+    City: <input type="text" data-ng-model="filter.city" /> {{filter.city}} {{cityCounted}}
+    <ul>
+        <li data-ng-repeat="cust in customers | filter:filter.city | orderBy:'city'">
+            {{cust.name | lowercase}} - {{cust.city | uppercase }}
+        </li>
+    </ul>
+    <a href="#/">View 1</a>
+</div>
